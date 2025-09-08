@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}قائمة المشاريع{% endblock %}
+{% block content %}
+<h2>جميع المشاريع</h2>
+<a href="{% url 'create_project' %}">+ إضافة مشروع جديد</a>
+<ul>
+    {% for project in projects %}
+        <li>
+            <strong>{{ project.title }}</strong><br>
+            {{ project.details }}<br>
+            <a href="{% url 'edit_project' project.id %}">✏ تعديل</a> | 
+            <a href="{% url 'delete_project' project.id %}">🗑 حذف</a>
+        </li>
+    {% empty %}
+        <p>لا توجد مشاريع حالياً</p>
+    {% endfor %}
+</ul>
+{% endblock %}

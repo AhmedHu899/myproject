@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}تعديل مشروع{% endblock %}
+{% block content %}
+<h2>تعديل المشروع</h2>
+<form method="POST">
+    {% csrf_token %}
+    <input type="text" name="title" value="{{ project.title }}" required><br>
+    <textarea name="details" required>{{ project.details }}</textarea><br>
+    <input type="number" name="target" value="{{ project.target }}" required><br>
+    <input type="date" name="start_date" value="{{ project.start_date }}" required><br>
+    <input type="date" name="end_date" value="{{ project.end_date }}" required><br>
+    <button type="submit">تحديث</button>
+</form>
+{% endblock %}

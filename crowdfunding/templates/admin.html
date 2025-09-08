@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}لوحة التحكم - شركة الفتح{% endblock %}
+
+{% block content %}
+<div class="admin-container">
+    <h2>لوحة تحكم المشرف</h2>
+    
+    <div class="admin-tabs">
+        <button class="tab-btn active" onclick="openTab('projects')">إدارة المشاريع</button>
+        <button class="tab-btn" onclick="openTab('services')">إدارة الخدمات</button>
+        <button class="tab-btn" onclick="openTab('testimonials')">إدارة آراء العملاء</button>
+    </div>
+    
+    <div id="projects" class="tab-content active">
+        <h3>المشاريع</h3>
+        <button class="btn" onclick="showAddForm('project')">إضافة مشروع جديد</button>
+        
+        <div class="items-list">
+            <!-- قائمة المشاريع -->
+            <div class="item-card">
+                <img src="{% static 'images/project1.jpg' %}" alt="مشروع 1">
+                <div class="item-info">
+                    <h4>مشروع فيلا فاخرة</h4>
+                    <p>تم التنفيذ: 15 أغسطس 2023</p>
+                </div>
+                <div class="item-actions">
+                    <button class="btn-small">تعديل</button>
+                    <button class="btn-small btn-danger">حذف</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="services" class="tab-content">
+        <h3>الخدمات</h3>
+        <!-- محتوى إدارة الخدمات -->
+    </div>
+    
+    <div id="testimonials" class="tab-content">
+        <h3>آراء العملاء</h3>
+        <!-- محتوى إدارة آراء العملاء -->
+    </div>
+</div>
+{% endblock %}

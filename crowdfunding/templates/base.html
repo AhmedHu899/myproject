@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}شركة الفتح للمقاولات{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    <!-- 🔹 الهيدر -->
+    <header>
+        <div class="logo">شركة الفتح</div>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">الصفحة الرئيسية</a></li>
+                <li><a href="{% url 'about' %}">عن الشركة</a></li>
+                <li><a href="{% url 'projects_list' %}">مشاريعنا</a></li>
+                <li><a href="{% url 'contact' %}">اتصل بنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 🔹 المحتوى -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- 🔹 الفوتر -->
+    <footer>
+        <p>جميع الحقوق محفوظة © شركة الفتح للمقاولات 2025</p>
+    </footer>
+
+</body>
+</html>

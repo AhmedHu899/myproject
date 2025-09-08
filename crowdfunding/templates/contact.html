@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}اتصل بنا - شركة الفتح{% endblock %}
+
+{% block content %}
+<h2>تواصل معنا</h2>
+<p>📍 العنوان: القاهرة - مصر</p>
+<p>📞 الهاتف: 010665588120</p>
+<p>📧 الإيميل: info@alfath.com</p>
+<form>
+    <label>الاسم:</label>
+    <input type="text" name="name" required>
+    <label>البريد الإلكتروني:</label>
+    <input type="email" name="email" required>
+    <label>رسالتك:</label>
+    <textarea name="message" required></textarea>
+    <button type="submit">إرسال</button>
+</form>
+{% endblock %}

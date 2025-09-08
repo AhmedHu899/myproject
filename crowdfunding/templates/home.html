@@ -1,0 +1,784 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}الرئيسية - شركة الفتح للمقاولات{% endblock %}
+
+{% block content %}
+
+<!-- Slider -->
+<div class="slider">
+    <div class="slide active">
+        <img src="{% static 'images/slider1.jpg' %}" alt="مشروع 1">
+        <div class="slide-content">
+            <h2>مشاريع إنشائية بمعايير عالمية</h2>
+            <p>نقدم حلولاً إنشائية متكاملة تلبي أعلى معايير الجودة والسلامة</p>
+            <a href="{% url 'projects_list' %}" class="slider-btn">استعرض المشاريع</a>
+        </div>
+    </div>
+    <div class="slide">
+        <img src="{% static 'images/slider2.jpg' %}" alt="مشروع 2">
+        <div class="slide-content">
+            <h2>تجفيف التربة وتأسيس المشاريع</h2>
+            <p>خبرة واسعة في تجفيف التربة وتأسيس المشاريع بأحدث التقنيات</p>
+            <a href="#services" class="slider-btn">تعرف على خدماتنا</a>
+        </div>
+    </div>
+    <div class="slide">
+        <img src="{% static 'images/slider3.jpg' %}" alt="مشروع 3">
+        <div class="slide-content">
+            <h2>ديكورات مبتكرة تناسب ذوقك</h2>
+            <p>تصميم وتنفيذ ديكورات داخلية وخارجية بلمسة فنية إبداعية</p>
+            <a href="#services" class="slider-btn">اطلب خدمة</a>
+        </div>
+    </div>
+    <div class="slide">
+        <img src="{% static 'images/slider4.jpg' %}" alt="مشروع 4">
+        <div class="slide-content">
+            <h2>بنية تحتية متكاملة</h2>
+            <p>تنفيذ مشاريع البنية التحتية بأعلى معايير الجودة والكفاءة</p>
+            <a href="{% url 'contact' %}" class="slider-btn">تواصل معنا</a>
+        </div>
+    </div>
+    
+    <!-- أزرار التحكم -->  
+    <div class="slider-controls">
+        <button class="prev"><i class="fas fa-chevron-right"></i></button>
+        <button class="next"><i class="fas fa-chevron-left"></i></button>
+    </div>
+
+    <!-- نقاط الـSlider -->
+    <div class="slider-dots">
+        <span class="dot active" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+        <span class="dot" data-index="3"></span>
+    </div>
+</div>
+
+<!-- Company Info -->
+<section class="company-info">
+    <div class="container">
+        <h2 class="section-title">شركة الفتح للمقاولات</h2>
+        <p>
+            تأسست شركة الفتح للمقاولات عام 2005، وتخصصت في تنفيذ المشاريع الإنشائية، تجفيف التربة، الديكورات، والبنية التحتية. 
+            نمتلك فريقاً من المهندسين والخبراء ذوي الكفاءة العالية، ونلتزم بأعلى معايير الجودة والسلامة. 
+            نفخر بتقديم خدماتنا لأكثر من 200 عميل راضٍ في مختلف أنحاء المملكة.
+        </p>
+        <a href="{% url 'about' %}" class="btn">اقرأ المزيد عنا</a>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="services" id="services">
+    <div class="container">
+        <h2 class="section-title">خدماتنا</h2>
+        <div class="services-container">
+            <div class="service-card fade-in">
+                <div class="service-icon">
+                    <i class="fas fa-building"></i>
+                </div>
+                <h3>البناء والتشييد</h3>
+                <p>تنفيذ مشاريع بناء متكاملة بجودة عالية وتصاميم مبتكرة تلبي احتياجات العملاء.</p>
+                <a href="#" class="service-link">المزيد <i class="fas fa-arrow-left"></i></a>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon">
+                    <i class="fas fa-tint-slash"></i>
+                </div>
+                <h3>تجفيف التربة</h3>
+                <p>خدمات تجفيف التربة المتخصصة باستخدام أحدث التقنيات والماكينات المتطورة.</p>
+                <a href="#" class="service-link">المزيد <i class="fas fa-arrow-left"></i></a>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon">
+                    <i class="fas fa-paint-roller"></i>
+                </div>
+                <h3>الديكورات الداخلية</h3>
+                <p>تصميم وتنفيذ ديكورات داخلية مبتكرة تجمع بين الجمال والوظيفية والأناقة.</p>
+                <a href="#" class="service-link">المزيد <i class="fas fa-arrow-left"></i></a>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon">
+                    <i class="fas fa-road"></i>
+                </div>
+                <h3>البنية التحتية</h3>
+                <p>تنفيذ مشاريع البنية التحتية من طرق وجسور وأنظمة صرف صحي وخدمات.</p>
+                <a href="#" class="service-link">المزيد <i class="fas fa-arrow-left"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Special Offers Section -->
+<section class="special-offers">
+    <div class="container">
+        <h2 class="section-title">عروض خاصة</h2>
+        <div class="offers-container">
+            <div class="offer-card">
+                <div class="offer-badge">عرض محدود</div>
+                <h3>خصم 15% على التشطيبات</h3>
+                <p>احصل على خصم 15% على جميع أعمال التشطيب والديكور عند التعاقد هذا الشهر</p>
+                <div class="offer-validity">صالح حتى: 30 ديسمبر 2023</div>
+                <a href="#contact-form" class="btn">استفد من العرض</a>
+            </div>
+            <div class="offer-card">
+                <div class="offer-badge">عرض جديد</div>
+                <h3>استشارة مجانية</h3>
+                <p>احصل على استشارة هندسية مجانية لمشروعك مع أفضل المهندسين المتخصصين</p>
+                <div class="offer-validity">عرض دائم</div>
+                <a href="#contact-form" class="btn">اطلب استشارة</a>
+            </div>
+            <div class="offer-card">
+                <div class="offer-badge">عرض حصري</div>
+                <h3>تصميم 3D مجاني</h3>
+                <p>احصل على تصميم ثلاثي الأبعاد مجاني لمشروعك عند التعاقد على أعمال البناء</p>
+                <div class="offer-validity">صالح حتى: 31 يناير 2024</div>
+                <a href="#contact-form" class="btn">احصل على التصميم</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us Section -->
+<section class="why-choose-us">
+    <div class="container">
+        <h2 class="section-title">لماذا تختار شركة الفتح؟</h2>
+        
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="fas fa-award"></i>
+                </div>
+                <h3>جودة لا compromise</h3>
+                <p>نلتزم بأعلى معايير الجودة في جميع مشاريعنا ونستخدم أفضل المواد</p>
+            </div>
+            
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h3>التزام بالوقت</h3>
+                <p>نسلم مشاريعنا في الوقت المحدد دون تأخير مع الحفاظ على الجودة</p>
+            </div>
+            
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="fas fa-hand-holding-usd"></i>
+                </div>
+                <h3>أسعار تنافسية</h3>
+                <p>نقدم أسعاراً تنافسية مع الحفاظ على أعلى معايير الجودة والكفاءة</p>
+            </div>
+            
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>فريق متخصص</h3>
+                <p>فريق من المهندسين والخبراء ذوي الخبرة الواسعة في مجال المقاولات</p>
+            </div>
+            
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3>دعم فني متكامل</h3>
+                <p>ندعمك من مرحلة التخطيط حتى التسليم وبعدها بخدمات الصيانة</p>
+            </div>
+            
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>ضمان على الأعمال</h3>
+                <p>نقدم ضماناً على جميع أعمالنا لضمان راحتك وثقتك بنا</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats">
+    <div class="container">
+        <h2 class="section-title">إحصائياتنا</h2>
+        <div class="stats-container">
+            <div class="stat-item fade-in">
+                <div class="stat-number" data-target="350">0</div>
+                <div class="stat-text">مشروع مكتمل</div>
+            </div>
+            <div class="stat-item fade-in">
+                <div class="stat-number" data-target="120">0</div>
+                <div class="stat-text">موظف وخبير</div>
+            </div>
+            <div class="stat-item fade-in">
+                <div class="stat-number" data-target="200">0</div>
+                <div class="stat-text">عميل راضٍ</div>
+            </div>
+            <div class="stat-item fade-in">
+                <div class="stat-number" data-target="15">0</div>
+                <div class="stat-text">جائزة وتكريم</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section class="projects" id="projects">
+    <div class="container">
+        <h2 class="section-title">مشاريعنا السابقة</h2>
+        <div class="projects-container">
+            {% for i in "1234" %}
+            <div class="project-card fade-in">
+                <div class="project-img">
+                    <img src="{% static 'images/project'|add:forloop.counter|stringformat:'d'|add:'.jpg' %}" alt="مشروع {{ forloop.counter }}">
+                    <div class="project-overlay">
+                        <a href="#" class="project-link"><i class="fas fa-search"></i></a>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>مشروع {{ forloop.counter }}</h3>
+                    <p>وصف قصير للمشروع وما تم تنفيذه فيه من أعمال إنشائية وتصميمية.</p>
+                    <a href="{% url 'projects_list' %}" class="btn btn-small">تفاصيل المشروع</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="text-center" style="margin-top: 40px;">
+            <a href="{% url 'projects_list' %}" class="btn">عرض جميع المشاريع</a>
+        </div>
+    </div>
+</section>
+
+<!-- Video Gallery Section -->
+<section class="video-gallery">
+    <div class="container">
+        <h2 class="section-title">مشاريعنا بالفيديو</h2>
+        <p class="section-subtitle">شاهد أعمالنا عن قرب وتابع مراحل تنفيذ المشاريع</p>
+        
+        <div class="video-container">
+            <div class="video-item">
+                <div class="video-wrapper">
+                    <div class="video-placeholder" onclick="playVideo(this, 'https://www.youtube.com/embed/dQw4w9WgXcQ')">
+                        <img src="{% static 'images/video-thumb1.jpg' %}" alt="مشروع فيديو 1">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="video-caption">
+                        <h3>تنفيذ مشروع سكني متكامل</h3>
+                        <p>شاهد مراحل بناء فيلا فاخرة من التأسيس إلى التسليم</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="video-item">
+                <div class="video-wrapper">
+                    <div class="video-placeholder" onclick="playVideo(this, 'https://www.youtube.com/embed/dQw4w9WgXcQ')">
+                        <img src="{% static 'images/video-thumb2.jpg' %}" alt="مشروع فيديو 2">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="video-caption">
+                        <h3>تجفيف تربة لمشروع تجاري</h3>
+                        <p>كيفية تجهيز وتجفيف التربة للمشاريع الكبيرة</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="video-item">
+                <div class="video-wrapper">
+                    <div class="video-placeholder" onclick="playVideo(this, 'https://www.youtube.com/embed/dQw4w9WgXcQ')">
+                        <img src="{% static 'images/video-thumb3.jpg' %}" alt="مشروع فيديو 3">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="video-caption">
+                        <h3>تصميم داخلي لفندق 5 نجوم</h3>
+                        <p>جولة داخلية لأعمال الديكور والتصميم الداخلي</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center" style="margin-top: 40px;">
+            <a href="#" class="btn">شاهد المزيد من الفيديوهات</a>
+        </div>
+    </div>
+</section>
+
+<!-- Video Modal -->
+<div id="videoModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="video-frame">
+            <iframe id="videoPlayer" width="100%" height="100%" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
+<!-- Testimonials Section -->
+<section class="testimonials">
+    <div class="container">
+        <h2 class="section-title">آراء عملائنا</h2>
+        <div class="testimonials-container">
+            <div class="testimonial active">
+                <p class="testimonial-text">
+                    "تعاملت مع شركة الفتح في مشروعي السكني وكانت تجربة رائعة. التزام تام بالمواعيد وجودة عالية في التنفيذ. أنصح بالتعامل معهم لكل من يبحث عن الجودة والاحترافية."
+                </p>
+                <div class="testimonial-client">
+                    <div class="client-info">
+                        <h4>أحمد السيد</h4>
+                        <p>مشروع سكني - الرياض</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <p class="testimonial-text">
+                    "شركة الفتح من أفضل شركات المقاولات التي تعاملت معها. فريق عمل محترف يقدم استشارات قيمة ويحرص على إرضاء العميل. مشروع المركز التجاري تم بتنفيذ ممتاز وفي الوقت المحدد."
+                </p>
+                <div class="testimonial-client">
+                    <div class="client-info">
+                        <h4>محمد العلي</h4>
+                        <p>مركز تجاري - جدة</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <p class="testimonial-text">
+                    "نفذت لنا شركة الفتح مشروع تجفيف تربة لمصنعنا الجديد وكان العمل متقناً وفي الوقت المحدد. الأسعار مناسبة والجودة ممتازة. سنتعامل معهم مرة أخرى في مشاريعنا القادمة."
+                </p>
+                <div class="testimonial-client">
+                    <div class="client-info">
+                        <h4>خالد الشراري</h4>
+                        <p>مصنع - الدمام</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-controls">
+            <button class="testimonial-prev"><i class="fas fa-chevron-right"></i></button>
+            <button class="testimonial-next"><i class="fas fa-chevron-left"></i></button>
+        </div>
+
+        <!-- Rating System -->
+        <div class="rating-system">
+            <h4>قيم تجربتك معنا</h4>
+            <div class="stars" id="ratingStars">
+                <span class="star" data-value="1">☆</span>
+                <span class="star" data-value="2">☆</span>
+                <span class="star" data-value="3">☆</span>
+                <span class="star" data-value="4">☆</span>
+                <span class="star" data-value="5">☆</span>
+            </div>
+            <textarea placeholder="اكتب مراجعتك هنا..." id="reviewText"></textarea>
+            <button class="btn" onclick="submitReview()">إرسال التقييم</button>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section">
+    <div class="container">
+        <h2 class="section-title">أسئلة شائعة</h2>
+        <p class="section-subtitle">إجابات على الأسئلة الأكثر شيوعاً من عملائنا</p>
+        
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <h3>كم تستغرق مدة تنفيذ مشروع بناء فيلا؟</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>مدة التنفيذ تعتمد على عدة عوامل مثل مساحة المشروع، التصميم، والعوامل الجوية. بشكل عام، تستغرق الفيلا المتوسطة من 6 إلى 9 أشهر. نحرص دائماً على الالتزام بالجداول الزمنية المتفق عليها.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <h3>هل تقدمون ضمان على أعمال البناء?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>نعم، نقدم ضماناً لمدة 10 سنوات على الهيكل الإنشائي، وضماناً لمدة سنتين على الأعمال الكهربائية والسباكة، وضماناً لمدة سنة على أعمال التشطيب والدهانات.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <h3>ما هي الخطوات الأولى لبدء مشروع بناء؟</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>تبدأ العملية بمقابلة أولية لفهم متطلباتك، ثم نقوم بدراسة الموقع وإعداد التصاميم الأولية، بعد الموافقة عليها نقدم دراسة الجدوى والتكلفة التفصيلية، وأخيراً نوقع العقد ونبدأ التنفيذ.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <h3>هل تقومون بإدارة المشاريع عن بعد؟</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>نعم، لدينا نظام متكامل لإدارة المشاريع عن بعد يتضمن تقارير أسبوعية، بث مباشر لموقع العمل، وجولات افتراضية لمتابعة سير العمل، مما يمكنك من متابعة مشروعك من أي مكان.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <h3>ما هي الخدمات التي تميزكم عن غيركم؟</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>نتميز بتقديم حلول متكاملة من التصميم إلى التسليم، فريق هندسي متخصص، استخدام أحدث التقنيات في البناء، الالتزام بالجداول الزمنية، والشفافية الكاملة في التواصل مع العملاء.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="faq-contact">
+            <p>لم تجد إجابة لسؤالك؟ <a href="#contact-form">اتصل بنا</a> وسنكون سعداء بمساعدتك</p>
+        </div>
+    </div>
+</section>
+
+<!-- Blog Section -->
+<section class="blog">
+    <div class="container">
+        <h2 class="section-title">أحدث الأخبار والمقالات</h2>
+        <div class="blog-container">
+            <div class="blog-card">
+                <div class="blog-image">
+                    <img src="{% static 'images/blog1.jpg' %}" alt="مقال 1">
+                    <div class="blog-date">15 سبتمبر 2023</div>
+                </div>
+                <div class="blog-content">
+                    <h3>أحدث تقنيات البناء المستدام</h3>
+                    <p>اكتشف كيف نطبق أحدث تقنيات البناء المستدام في مشاريعنا للحفاظ على البيئة...</p>
+                    <a href="#" class="read-more">قراءة المزيد <i class="fas fa-arrow-left"></i></a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-image">
+                    <img src="{% static 'images/blog2.jpg' %}" alt="مقال 2">
+                    <div class="blog-date">10 سبتمبر 2023</div>
+                </div>
+                <div class="blog-content">
+                    <h3>تحديات تجفيف التربة في المناطق الصحراوية</h3>
+                    <p>كيف نتغلب على تحديات تجفيف التربة في المناطق الصحراوية بمشاريعنا...</p>
+                    <a href="#" class="read-more">قراءة المزيد <i class="fas fa-arrow-left"></i></a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-image">
+                    <img src="{% static 'images/blog3.jpg' %}" alt="مقال 3">
+                    <div class="blog-date">5 سبتمبر 2023</div>
+                </div>
+                <div class="blog-content">
+                    <h3>اتجاهات التصميم الداخلي لعام 2023</h3>
+                    <p>أبرز اتجاهات التصميم الداخلي التي نطبقها في مشاريعنا هذا العام...</p>
+                    <a href="#" class="read-more">قراءة المزيد <i class="fas fa-arrow-left"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center" style="margin-top: 40px;">
+            <a href="#" class="btn">عرض جميع المقالات</a>
+        </div>
+    </div>
+</section>
+
+<!-- Service Request Section -->
+<section class="service-request" id="service-request">
+    <div class="container">
+        <h2 class="section-title">طلب خدمة</h2>
+        <div class="request-container">
+            <form id="serviceRequestForm" class="request-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" id="requestName" name="requestName" required>
+                        <label for="requestName">الاسم بالكامل</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="requestEmail" name="requestEmail" required>
+                        <label for="requestEmail">البريد الإلكتروني</label>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <select id="serviceType" name="serviceType" required onchange="calculateCost()">
+                            <option value="">اختر نوع الخدمة</option>
+                            <option value="construction">البناء والتشييد</option>
+                            <option value="soil-drying">تجفيف التربة</option>
+                            <option value="interior">الديكورات الداخلية</option>
+                            <option value="infrastructure">البنية التحتية</option>
+                        </select>
+                        <label for="serviceType">نوع الخدمة</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <select id="projectSize" name="projectSize" required onchange="calculateCost()">
+                            <option value="">اختر حجم المشروع</option>
+                            <option value="small">صغير (أقل من 500 م²)</option>
+                            <option value="medium">متوسط (500 - 2000 م²)</option>
+                            <option value="large">كبير (أكثر من 2000 م²)</option>
+                        </select>
+                        <label for="projectSize">حجم المشروع</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <textarea id="projectDetails" name="projectDetails" rows="4" placeholder="أخبرنا عن تفاصيل مشروعك..."></textarea>
+                </div>
+                
+                <div class="cost-estimate">
+                    <h3>التكلفة التقريبية: <span id="estimatedCost">0</span> ريال سعودي</h3>
+                    <p class="cost-note">* هذا تقدير تقريبي وقد يتغير بعد دراسة المشروع</p>
+                </div>
+                
+                <button type="submit" class="btn">إرسال طلب الخدمة</button>
+            </form>
+            
+            <div class="request-info">
+                <h3>كيفية طلب الخدمة</h3>
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>اختر الخدمة</h4>
+                        <p>اختر نوع الخدمة التي تحتاجها من القائمة</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>حدد حجم المشروع</h4>
+                        <p>اختر الفئة المناسبة لحجم مشروعك</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>احصل على التقدير</h4>
+                        <p>ستظهر التكلفة التقريبية تلقائياً</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>أرسل الطلب</h4>
+                        <p>سنقوم بالاتصال بك خلال 24 ساعة</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Form Section -->
+<section class="contact-form" id="contact-form">
+    <div class="container">
+        <h2 class="section-title">تواصل معنا</h2>
+        <div class="form-container">
+            <form id="contactForm" class="form">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" required>
+                    <label for="name">الاسم بالكامل</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" required>
+                    <label for="email">البريد الإلكتروني</label>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="phone" name="phone">
+                    <label for="phone">رقم الهاتف</label>
+                </div>
+                <div class="form-group">
+                    <select id="service" name="service" required>
+                        <option value=""></option>
+                        <option value="construction">البناء والتشييد</option>
+                        <option value="soil-drying">تجفيف التربة</option>
+                        <option value="interior">الديكورات الداخلية</option>
+                        <option value="infrastructure">البنية التحتية</option>
+                    </select>
+                    <label for="service">نوع الخدمة المطلوبة</label>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <label for="message">الرسالة</label>
+                </div>
+                <button type="submit" class="btn">إرسال الرسالة</button>
+            </form>
+            <div class="form-info">
+                <h3>معلومات التواصل</h3>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+966 12 345 6789</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@alfath-construction.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>الرياض، المملكة العربية السعودية</span>
+                </div>
+                <div class="working-hours">
+                    <h4>أوقات العمل</h4>
+                    <p>الأحد - الخميس: 8 ص - 5 م</p>
+                    <p>الجمعة والسبت: مغلق</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Map Section -->
+<section class="map-section">
+    <div class="container">
+        <h2 class="section-title">موقعنا</h2>
+        <div class="map-container">
+            <div class="map" id="companyMap">
+                <!-- سيتم تحميل الخريطة هنا via JavaScript -->
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>جاري تحميل الخريطة...</p>
+                </div>
+            </div>
+            <div class="map-info">
+                <h3>زيارتنا</h3>
+                <p>نحن موجودون في قلب الرياض، يمكنكم زيارتنا خلال أوقات العمل لمناقشة مشاريعكم.</p>
+                <div class="address">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>حي العليا، شارع الملك فهد، الرياض 12345، المملكة العربية السعودية</span>
+                </div>
+                <a href="#" class="btn">احصل على اتجاهات</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Social Media Section -->
+<section class="social-media">
+    <div class="container">
+        <h2 class="section-title">تابعنا على وسائل التواصل</h2>
+        <p class="section-subtitle">كن أول من يعرف عن مشاريعنا الجديدة وعروضنا الخاصة</p>
+        
+        <div class="social-feed">
+            <div class="social-posts">
+                <div class="social-post">
+                    <div class="post-header">
+                        <img src="{% static 'images/logo-small.png' %}" alt="شركة الفتح">
+                        <div class="post-info">
+                            <h3>شركة الفتح للمقاولات</h3>
+                            <span>منذ 3 أيام</span>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <p>تم الانتهاء من تشطيب فيلا فاخرة في حي الربيع 🎉 تصميم داخلي راقي يجمع بين الفخامة والأناقة</p>
+                        <div class="post-image">
+                            <img src="{% static 'images/social-post1.jpg' %}" alt="مشروع فيلا">
+                        </div>
+                    </div>
+                    <div class="post-actions">
+                        <span><i class="far fa-heart"></i> 128</span>
+                        <span><i class="far fa-comment"></i> 24</span>
+                        <span><i class="far fa-share-square"></i> 8</span>
+                    </div>
+                </div>
+                
+                <div class="social-post">
+                    <div class="post-header">
+                        <img src="{% static 'images/logo-small.png' %}" alt="شركة الفتح">
+                        <div class="post-info">
+                            <h3>شركة الفتح للمقاولات</h3>
+                            <span>منذ أسبوع</span>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <p>🔥 عرض خاص لهذا الشهر فقط! خصم 15% على خدمات الديكور الداخلي. سارع بالاتصال بنا قبل انتهاء العرض</p>
+                    </div>
+                    <div class="post-actions">
+                        <span><i class="far fa-heart"></i> 89</span>
+                        <span><i class="far fa-comment"></i> 15</span>
+                        <span><i class="far fa-share-square"></i> 12</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="social-connect">
+                <h3>تواصل معنا على</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link twitter">
+                        <i class="fab fa-twitter"></i>
+                        <span>تويتر</span>
+                    </a>
+                    <a href="#" class="social-link instagram">
+                        <i class="fab fa-instagram"></i>
+                        <span>انستغرام</span>
+                    </a>
+                    <a href="#" class="social-link facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        <span>فيسبوك</span>
+                    </a>
+                    <a href="#" class="social-link youtube">
+                        <i class="fab fa-youtube"></i>
+                        <span>يوتيوب</span>
+                    </a>
+                    <a href="#" class="social-link linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                        <span>لينكدإن</span>
+                    </a>
+                </div>
+                
+                <div class="social-stats">
+                    <div class="stat">
+                        <h4>5K+</h4>
+                        <p>متابعين</p>
+                    </div>
+                    <div class="stat">
+                        <h4>120+</h4>
+                        <p>مشروع منشور</p>
+                    </div>
+                    <div class="stat">
+                        <h4>98%</h4>
+                        <p>رضا العملاء</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta" id="contact">
+    <div class="container">
+        <h2>هل تبحث عن شركة مقاولات موثوقة؟</h2>
+        <p>تواصل معنا اليوم للحصول على استشارة مجانية وتقديم عرض سعر لمشروعك</p>
+        <a href="{% url 'contact' %}" class="btn">اتصل بنا الآن</a>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/home.js' %}"></script>
+{% endblock %}
+
+<!-- Progress Bar -->
+<div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+</div>
+
+<!-- Back to Top Button -->
+<button id="backToTop" class="back-to-top" aria-label="العودة إلى الأعلى">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- Preload important resources -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap">
+
+<!-- Preload critical images -->
+<link rel="preload" href="{% static 'images/slider1.jpg' %}" as="image">
+<link rel="preload" href="{% static 'images/logo.png' %}" as="image">
